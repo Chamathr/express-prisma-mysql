@@ -1,0 +1,14 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model test_1 {
+  id   Int     @id
+  name String  @db.VarChar(45)
+  age  String? @db.VarChar(45)
+}
